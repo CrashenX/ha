@@ -3,9 +3,9 @@ blueprint:
   description: Set room scene based on the time of day. Set to bright if activated when lights are already on.
   domain: script
   input:
-    name:
-      description: The name / alias for the script
-    icon:
+    script_alias:
+      description: The alias for the script
+    script_icon:
       description: The icon to use for the script
     light_group:
       description: The group of lights to set the scene for
@@ -19,7 +19,7 @@ blueprint:
       description: The scene to use between sunset and midnight
     night_scene:
       description: The scene to use between midnight and first light
-alias: !input name
+alias: !input script_alias
 sequence:
   - choose:
       - conditions:
@@ -102,4 +102,4 @@ sequence:
               entity_id: !input night_scene
             metadata: {}
 mode: single
-icon: !input icon
+icon: !input script_icon
