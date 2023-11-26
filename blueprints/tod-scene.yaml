@@ -30,6 +30,8 @@ sequence:
                 state: "off"
         sequence:
           - service: scene.turn_on
+            data:
+              transition: 2
             target:
               entity_id: !input dawn_scene
             metadata: {}
@@ -46,6 +48,8 @@ sequence:
                 state: "off"
         sequence:
           - service: scene.turn_on
+            data:
+              transition: 2
             target:
               entity_id: !input sunrise_scene
             metadata: {}
@@ -67,6 +71,8 @@ sequence:
                     state: "off"
         sequence:
           - service: scene.turn_on
+            data:
+              transition: 2
             target:
               entity_id: !input bright_scene
             metadata: {}
@@ -80,6 +86,8 @@ sequence:
                 state: "off"
         sequence:
           - service: scene.turn_on
+            data:
+              transition: 2
             target:
               entity_id: !input sunset_scene
             metadata: {}
@@ -93,6 +101,8 @@ sequence:
                 state: "off"
         sequence:
           - service: scene.turn_on
+            data:
+              transition: 2
             target:
               entity_id: !input night_scene
             metadata: {}
